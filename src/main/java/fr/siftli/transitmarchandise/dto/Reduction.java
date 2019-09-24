@@ -9,21 +9,19 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.io.Serializable;
+import java.util.Date;
 
-@Getter
 @Setter
+@Getter
 @Entity
 @Component
-public class Utilisateur implements Serializable {
+public class Reduction implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String username;
-    private String role;
-    private String password;
-    private String email;
-
-
-
+    private float valeur;
+    private String code;
+    private Date datedebut;
+    private Date dateFin;
 }
